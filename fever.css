@@ -1,0 +1,142 @@
+body {
+    background: #ebf0f4;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+    height: 50px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .logo h1 {
+    font-size: 24px;
+    color: #f8c94c;
+}
+a{
+    text-decoration: none;
+    color: #f8c94c;
+}
+
+.form-controlme-2 {
+    border-radius: 50px;
+}
+
+button {
+    color: black;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Title Styling */
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 30px;
+    animation: fadeInTitle 1s ease-in-out;
+}
+
+.alphabet-nav {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+}
+
+.alphabet-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alphabet-nav ul li {
+    margin: 5px 0;
+}
+
+.alphabet-nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4CAF50;
+    transition: color 0.3s ease;
+}
+
+.alphabet-nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Medicine List */
+.medicine-list {
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.medicine-list h3 {
+    color: #4CAF50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.medicine-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.medicine-list ul li {
+    margin: 10px 0;
+}
+
+.medicine-list ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.medicine-list ul li a:hover {
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    height: 50px;
+    margin-top: 60px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 50px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

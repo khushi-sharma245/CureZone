@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CureZone - Your Trusted Gateway to Medicine Insights">
+    <title>CureZone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-us {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .contact-info {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .about-us:hover .contact-info {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>CureZone</h1>
+                <span class="tagline">Your Trusted Gateway to Medicine Insights</span>
+            </div>
+            <div class="about-us">
+                <span id="about-us-button">About Us</span>
+                <div class="contact-info" id="contact-info" style="display: none;">
+                    <p><a href="mailto:info@curezone.com" target="_blank">Email: info@curezone.com</a></p>
+                    <p><a href="tel:1234567890">Contact: 123-456-7890</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <div class="hero-section">
+        <div class="search-container">
+            <input type="text" id="search-medicine" placeholder="Search medicines" oninput="showRecommendations()">
+            <button id="search-btn" onclick="searchMedicine()">Search</button>
+            <div id="medicine-recommendations" class="medicine-list" style="display: none;">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <h3 class="head1">Paracetamol</h3>
+            <p>Paracetamol is often used to treat mild to moderate pain. Paracetamol is safe for most people to take and side effects are rare.</p>
+            <br>
+            <a class="file" href="paracetamol.html">Learn more</a>
+        </div>
+        <div class="box">
+            <h3 class="head1">Aspirin</h3>
+            <p>Aspirin is used to reduce fever and relieve mild to moderate pain from conditions such as muscle aches, toothaches, common cold, and headaches.</p>
+            <br>
+            <a class="file" href="aspirin.html">Learn more</a>
+        </div>
+        <div class="box">
+            <h3 class="head1">Cetirizine</h3>
+            <p>Cetirizine is used to temporarily relieve the symptoms of hay fever and allergy to other substances.</p>
+            <br>
+            <a class="file" href="cetirizine.html">Learn more</a>
+        </div>
+        <div class="box">
+            <h3 class="head1">Combiflam</h3>
+            <p>Combiflam is a widely used drug prescribed to reduce pain and inflammation. Doctors recommend the medicine for fever, headache, toothache, muscle, and joint pain.</p>
+            <br>
+            <a class="file" href="combiflam.html">Learn more</a>
+        </div>
+        <div class="box">
+            <h3 class="head1">Crocin</h3>
+            <p>Crocin is used to relieve headaches, migraine, toothache, period pain, back pain, muscle pain, and rheumatic pain.</p>
+            <br>
+            <a class="file" href="crocin.html">Learn more</a>
+        </div>
+        <div class="box">
+            <h3 class="head1">Other Medicines</h3>
+            <br>
+            <a class="file" href="viewall.html">View All</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CureZone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const medicines = [
+            { name: 'Acetaminophen', link: 'acetaminophen.html' },
+            { name: 'Advil', link: 'advil.html' },
+            { name: 'Alvedon', link: 'alvedon.html' },
+            { name: 'Aspirin', link: 'aspirin.html' },
+            { name: 'Brufen', link: 'brufen.html' },
+            { name: 'Calpol', link: 'calpol.html' },
+            { name: 'Combiflam', link: 'combiflam.html' },
+            { name: 'Crocin', link: 'crocin.html' },
+            { name: 'Dolo', link: 'dolo.html' },
+            { name: 'Dynapar', link: 'dynapar.html' },
+            { name: 'Emetrol', link: 'emetrol.html' },
+            { name: 'Fexofenadine', link: 'fexofenadine.html' },
+            { name: 'Grilinctus', link: 'grilinctus.html' },
+            { name: 'Ibuprofen', link: 'ibuprofen.html' },
+            { name: 'Ibugesic', link: 'ibugesic.html' },
+            { name: 'Meftal Forte', link: 'meftal-forte.html' },
+            { name: 'Motrin', link: 'motrin.html' },
+            { name: 'Naproxen', link: 'naproxen.html' },
+            { name: 'Nicip', link: 'nicip.html' },
+            { name: 'Nurofen', link: 'nurofen.html' },
+            { name: 'Paracetamol', link: 'paracetamol.html' },
+            { name: 'Saridon', link: 'saridon.html' },
+            { name: 'Sinarest', link: 'sinarest.html' },
+            { name: 'Solpadeine', link: 'solpadeine.html' },
+            { name: 'Tamiflu', link: 'tamiflu.html' },
+            { name: 'Theraflu', link: 'theraflu.html' },
+            { name: 'Tixylix', link: 'tixylix.html' },
+            { name: 'Tylenol', link: 'tylenol.html' },
+            { name: 'Vicks Action 500', link: 'vicks-action-500.html' },
+            { name: 'Zincovit', link: 'zincovit.html' },
+            { name: 'Acebutolol', link: 'acebutolol.html' },
+            { name: 'Anastrozole', link: 'anastrozole.html' },
+            { name: 'Atenolol', link: 'atenolol.html' },
+            { name: 'Bisoprolol', link: 'bisoprolol.html' },
+            { name: 'Bupivacaine', link: 'bupivacaine.html' },
+            { name: 'Captopril', link: 'captopril.html' },
+            { name: 'Carvedilol', link: 'carvedilol.html' },
+            { name: 'Clonidine', link: 'clonidine.html' },
+            { name: 'Diltiazem', link: 'diltiazem.html' },
+            { name: 'Diovan', link: 'diovan.html' },
+            { name: 'Enalapril', link: 'enalapril.html' },
+            { name: 'Felodipine', link: 'felodipine.html' },
+            { name: 'Hydrochlorothiazide', link: 'hydrochlorothiazide.html' },
+            { name: 'Lisinopril', link: 'lisinopril.html' },
+            { name: 'Losartan', link: 'losartan.html' },
+            { name: 'Metoprolol', link: 'metoprolol.html' },
+            { name: 'Minoxidil', link: 'minoxidil.html' },
+            { name: 'Nifedipine', link: 'nifedipine.html' },
+            { name: 'Nitroglycerin', link: 'nitroglycerin.html' },
+            { name: 'Propranolol', link: 'propranolol.html' },
+            { name: 'Ramipril', link: 'ramipril.html' },
+            { name: 'Spironolactone', link: 'spironolactone.html' },
+            { name: 'Sotalol', link: 'sotalol.html' },
+            { name: 'Telmisartan', link: 'telmisartan.html' },
+            { name: 'Verapamil', link: 'verapamil.html' },
+            { name: 'Butalbital', link: 'butalbital.html' },
+            { name: 'Bayer', link: 'bayer.html' },
+            { name: 'BC Powder', link: 'bc-powder.html' },
+            { name: 'Cafcit', link: 'cafcit.html' },
+            { name: 'Pain Relief', link: 'pain-relief.html' },
+            { name: 'Profen', link: 'profen.html' }
+        ];
+
+        function showRecommendations() {
+            const input = document.getElementById('search-medicine').value.toLowerCase();
+            const recommendations = document.getElementById('medicine-recommendations');
+            const ul = recommendations.querySelector('ul');
+            ul.innerHTML = '';
+
+            const filteredMedicines = medicines.filter(medicine => medicine.name.toLowerCase().includes(input));
+            if (filteredMedicines.length > 0) {
+                recommendations.style.display = 'block';
+                filteredMedicines.forEach(medicine => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${medicine.link}">${medicine.name}</a>`;
+                    ul.appendChild(li);
+                });
+            } else {
+                recommendations.style.display = 'none';
+            }
+        }
+
+        function searchMedicine() {
+            const input = document.getElementById('search-medicine').value.toLowerCase();
+            const medicine = medicines.find(med => med.name.toLowerCase() === input);
+            if (medicine) {
+                window.location.href = medicine.link;
+            } else {
+                alert('Medicine not found.');
+            }
+        }
+
+        document.getElementById('about-us-button').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent event from bubbling up
+            const contactInfo = document.getElementById('contact-info');
+            // Toggle visibility
+            contactInfo.style.display = contactInfo.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Hide the dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const aboutUs = document.querySelector('.about-us');
+            const contactInfo = document.getElementById('contact-info');
+
+            if (!aboutUs.contains(event.target)) {
+                contactInfo.style.display = 'none'; // Hide if clicked outside
+            }
+        });
+
+    </script>
+</body>
+</html>

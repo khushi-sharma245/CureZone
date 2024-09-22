@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .logo h1 {
+    font-size: 24px;
+    color: #f8c94c;
+}
+
+.about-us {
+    margin-left: 800px;
+    font-size: larger;
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-info {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #fff; /* Background color for dropdown */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+.contact-info p {
+    margin: 0; /* Remove default margin */
+    padding: 5px 0; /* Padding for each item */
+}
+
+.contact-info a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #367c39; /* Darker green on hover */
+}
+
+
+.search-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    height: 50px;
+    width: 500px;
+    border-radius: 70px;
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 50px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    height: 50px;
+    width: 100px;
+    border-radius: 70px;
+    padding: 10px 20px;
+    background-color: #f8c94c;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-section {
+    align-content: center;
+    height: 600px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.head1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-right: 70px;
+    margin-top: 10px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.box {
+    height: 200px;
+    width: 300px;
+    font-size: large;
+    text-align: center;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    border-radius: 47px;
+    background: #c5e2ea;
+    box-shadow: 31px 31px 64px #87a9b1, -31px -31px 64px #d7ffff;
+}
+
+.box a {
+    color: #6a1b9a; 
+    text-decoration: none;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-bottom: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#medicine-recommendations {
+    position: absolute;
+    top: 60px; 
+    left: 50px;
+    width: 500px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none; 
+    z-index: 1000; 
+}
+
+#medicine-recommendations ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#medicine-recommendations li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#medicine-recommendations li:hover {
+    background-color: #f0f0f0;
+}
+
+#medicine-recommendations a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+#medicine-recommendations a:hover {
+    color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+    .search-container input[type="text"] {
+        width: 300px;
+    }
+
+    #medicine-recommendations {
+        width: 300px;
+    }
+}

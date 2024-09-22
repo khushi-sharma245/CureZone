@@ -1,0 +1,162 @@
+body {
+    background: #ebf0f4;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1s ease-in-out; /* Added animation */
+}
+
+header {
+    background-color: #4CAF50;
+    height: 50px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .logo h1 {
+   
+    font-size: 24px;
+    color: #f8c94c;
+}
+a{
+    text-decoration:none;
+    color: #f8c94c;
+}
+
+
+.form-controlme-2 {
+    border-radius: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust */
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        padding: 5px; /* Reduce padding further for mobile */
+    }
+
+    #navbar > * {
+        width: 100%; /* Stack items vertically */
+        text-align: center; /* Center align text */
+    }
+}
+
+button {
+    color: black;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 55px;
+    color: yellow;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.About {
+    color: white;
+    margin-left: 700px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact {
+    color: white;
+    margin-left: 100px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+input {
+    margin-left: 100px;
+}
+
+footer {
+    height: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Container for category boxes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style for each category box */
+.box {
+    height: 250px;
+    width: 300px;
+    font-size: large;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    border-radius: 47px;
+    background: #c5e2ea;
+    box-shadow: 31px 31px 64px #87a9b1,
+                -31px -31px 64px #d7ffff;
+    display: inline-block;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.box a {
+    color: #6b4ca8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .box {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

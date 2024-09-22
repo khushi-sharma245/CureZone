@@ -1,0 +1,183 @@
+body{
+    background: #ebf0f4;
+    font-family: Arial, sans-serif;
+  } 
+  header {
+    background-color: #4CAF50;
+    height: 50px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-container .logo h1 {
+    font-size: 24px;
+    color: #f8c94c;
+  }
+  .form-controlme-2{
+    border-radius: 50px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust */
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #navbar {
+        padding: 5px; /* Reduce padding further for mobile */
+    }
+  
+    #navbar > * {
+        width: 100%; /* Stack items vertically */
+        text-align: center; /* Center align text */
+    }
+  }
+  
+    
+    button {
+      color: black;
+      border-radius: 50px;
+      background-color: rgb(255, 255, 255);
+      display: inline-block;
+      cursor: pointer;
+    }
+    #logo {
+      font-size: 55px;
+      color:yellow;
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .About{
+      color: white;
+      margin-left: 700px;
+      text-decoration: none;
+      display: inline-block;
+  
+    }
+    .contact{
+      color: white;
+      margin-left: 100px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    input{
+      margin-left: 100px;
+    }
+    .crocin{
+      margin-top: 20px;
+      margin-left: 50px;
+      height: 80%;
+      width: 90%;
+      float:10px left;
+      padding: 20px;
+      unicode-bidi: isolate;
+      border-radius: 32px;
+      background:#c5e2ea;
+      box-shadow:  15px 15px 26px #d0dce5,
+              
+  
+    }
+    .image{
+      height:300px;
+      width:300px;
+      border-radius:30px ;
+      border-radius:30px ;
+      background-image: url(crocin.jpg);
+      background-size: contain;
+      background-color: aquamarine;
+      margin-right: 150px;
+      margin-top: 150px;
+      display:inline;
+      float: right;
+    }
+   
+  
+    
+     footer {
+      margin-bottom: 20px;
+      background-color:black;
+      color: white;
+      padding: 10px;
+      text-align: center;
+  }
+    /* Animation for navbar items */
+  #navbar p {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #navbar p:hover {
+    color: #007bff; /* Change to your desired hover color */
+    transform: scale(1.1);
+  }
+  
+  /* Animation for search button */
+  #navbar button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #navbar button:hover {
+    background-color: #007bff; /* Change to your desired hover color */
+    color: white; /* Change text color on hover */
+    transform: scale(1.1);
+  }
+  
+  /* Animation for the crocin section */
+  .crocin {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add some motion to headings */
+  .crocin h1, .crocin h2 {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  /* Add subtle motion to paragraphs */
+  .crocin p {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
